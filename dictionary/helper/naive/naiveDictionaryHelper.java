@@ -2,10 +2,11 @@ package dictionary.helper.naive;
 
 import java.util.List;
 
+import algo.retrieval.naive.NaiveRetrieval;
 import dictionary.helper.DictionaryHelper;
 
-public class naiveDictionaryHelper implements DictionaryHelper {
-    private NaiveSearcher dataSet = new NaiveSearcher();
+public class NaiveDictionaryHelper implements DictionaryHelper {
+    private NaiveRetrieval dataSet = new NaiveRetrieval();
 
     @Override
     public boolean insert(String word){

@@ -4,7 +4,7 @@ import java.util.List;
 
 import dictionary.helper.DictionaryHelper;
 
-public class trieDictionaryHelper implements DictionaryHelper {
+public class TrieDictionaryHelper implements DictionaryHelper {
     private Trie dataTrie = new Trie();
 
     @Override

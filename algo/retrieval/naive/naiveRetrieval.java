@@ -4,11 +4,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import algo.retrieval.retrievalDS;
+import algo.retrieval.RetrievalDS;
 
-public class naiveRetrieval implements retrievalDS {
-    Set<String> dictionarySet = new HashSet<>();
-
+public class NaiveRetrieval implements RetrievalDS{
+    private Set<String> dictionarySet = new HashSet<String>();
+    
     public boolean insert(String word) {
         return dictionarySet.add(word);
     }
