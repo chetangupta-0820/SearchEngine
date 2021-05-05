@@ -2,6 +2,7 @@ package dictionary.helper.trie;
 
 import java.util.List;
 
+import algo.retrieval.trie.Trie;
 import dictionary.helper.DictionaryHelper;
 
 public class TrieDictionaryHelper implements DictionaryHelper {

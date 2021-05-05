@@ -7,7 +7,7 @@ import java.util.Set;
 import algo.retrieval.RetrievalDS;
 
 public class NaiveRetrieval implements RetrievalDS{
-    private Set<String> dictionarySet = new HashSet<String>();
+    private Set<String> dictionarySet = new HashSet<>();
     
     public boolean insert(String word) {
         return dictionarySet.add(word);
