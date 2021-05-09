@@ -1,7 +1,11 @@
 package algo.retrieval.trie;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import algo.retrieval.Pair;
 
 public class TrieNode {
     private boolean isEndOfWord;
@@ -82,7 +86,30 @@ public class TrieNode {
         return false;
     }
 
+    TrieNode getPrefixNode(String word,int index){
+        //Base Case
+        if(index==word.length())
+            return this;
 
+        if(children.get(word.charAt(index))== null)
+            return null;
+        
+        return children.get(word.charAt(index)).getPrefixNode(word, index+1);
+    }
 
+    List<Pair> getAllDescendentWords(String prefix){
+        List<Pair> descendents = new ArrayList<>();
+        //Base Case
+        if(isEndOfWord){
+            descendents.add(new Pair(prefix, accessFrequency));
+        }
+
+        for(char c: children.keySet()){
+            String newPrefix = prefix+c;
+            descendents.addAll(children.get(c).getAllDescendentWords(newPrefix));
+        }
+
+        return descendents;
+    }
 
 }
